@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://808xkkvdloah"]
+
+[ext_resource type="Script" path="res://scenes/game_over/game_over.gd" id="1_u36q1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lavgr"]
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_boqwy"]
+font_size = 32
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_u36q1")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 718.0
+
+[node name="GameOverLabel" type="Label" parent="."]
+offset_left = 185.0
+offset_top = 90.0
+offset_right = 532.0
+offset_bottom = 178.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Game Over
+"
+label_settings = SubResource("LabelSettings_lavgr")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 305.0
+offset_top = 319.0
+offset_right = 400.0
+offset_bottom = 364.0
+size_flags_horizontal = 4
+text = "Score:
+"
+label_settings = SubResource("LabelSettings_boqwy")
+horizontal_alignment = 1
+
+[node name="TryAgainButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 281.0
+offset_top = 516.0
+offset_right = 436.0
+offset_bottom = 570.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Try Again"

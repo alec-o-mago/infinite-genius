@@ -1,0 +1,259 @@
+[gd_scene load_steps=12 format=3 uid="uid://cd1rsgixvsd43"]
+
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_a6nxc"]
+[ext_resource type="AudioStream" uid="uid://cx5c3fr2q056i" path="res://assets/green.wav" id="2_q6g0o"]
+[ext_resource type="AudioStream" uid="uid://c5l834lhbblhj" path="res://assets/red.wav" id="3_j3bct"]
+[ext_resource type="AudioStream" uid="uid://bwvriw0tk4rdh" path="res://assets/yellow.wav" id="4_wuv4u"]
+[ext_resource type="AudioStream" uid="uid://88tog4jaksnj" path="res://assets/blue.wav" id="5_38brk"]
+
+[sub_resource type="Animation" id="Animation_lcn1e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.196078, 0.862745, 0.196078, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RedRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.862745, 0.196078, 0.196078, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("YellowRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.862745, 0.862745, 0.196078, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlueRect:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.196078, 0.196078, 0.862745, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sbyxq"]
+resource_name = "blue"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlueRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.196078, 0.196078, 0.862745, 1), Color(1, 1, 1, 1), Color(0.196078, 0.196078, 0.862745, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlueSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vhgmi"]
+resource_name = "green"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GreenRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.196078, 0.862745, 0.196078, 1), Color(1, 1, 1, 1), Color(0.196078, 0.862745, 0.196078, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GreenSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_807as"]
+resource_name = "red"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.862745, 0.196078, 0.196078, 1), Color(1, 1, 1, 1), Color(0.862745, 0.196078, 0.196078, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("RedSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_fboia"]
+resource_name = "yellow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("YellowRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.862745, 0.862745, 0.196078, 1), Color(1, 1, 1, 1), Color(0.862745, 0.862745, 0.196078, 1), Color(0.862745, 0.862745, 0.196078, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("YellowSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_es76w"]
+_data = {
+"RESET": SubResource("Animation_lcn1e"),
+"blue": SubResource("Animation_sbyxq"),
+"green": SubResource("Animation_vhgmi"),
+"red": SubResource("Animation_807as"),
+"yellow": SubResource("Animation_fboia")
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_a6nxc")
+
+[node name="GreenRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_right = 360.0
+offset_bottom = 360.0
+color = Color(0.196078, 0.862745, 0.196078, 1)
+
+[node name="RedRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_left = 360.0
+offset_right = 720.0
+offset_bottom = 360.0
+color = Color(0.862745, 0.196078, 0.196078, 1)
+
+[node name="YellowRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_top = 360.0
+offset_right = 360.0
+offset_bottom = 720.0
+color = Color(0.862745, 0.862745, 0.196078, 1)
+
+[node name="BlueRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_left = 360.0
+offset_top = 360.0
+offset_right = 720.0
+offset_bottom = 720.0
+color = Color(0.196078, 0.196078, 0.862745, 1)
+
+[node name="GreenButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_right = 360.0
+offset_bottom = 360.0
+stretch_mode = 0
+
+[node name="RedButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_left = 360.0
+offset_right = 720.0
+offset_bottom = 360.0
+stretch_mode = 0
+
+[node name="YellowButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_top = 360.0
+offset_right = 360.0
+offset_bottom = 720.0
+stretch_mode = 0
+
+[node name="BlueButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(360, 360)
+offset_left = 360.0
+offset_top = 360.0
+offset_right = 720.0
+offset_bottom = 720.0
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_es76w")
+}
+
+[node name="GreenSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_q6g0o")
+
+[node name="RedSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j3bct")
+
+[node name="YellowSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wuv4u")
+
+[node name="BlueSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_38brk")
